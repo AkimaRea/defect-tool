@@ -23,5 +23,6 @@ export default defineConfig({
       protocol: "ws",
     },
   },
+  base: "/defect-tool",
   plugins: [svgr(), react() /* , mkcert() */],
 });
