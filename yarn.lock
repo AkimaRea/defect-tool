@@ -581,10 +581,10 @@
     "@parcel/watcher-win32-ia32" "2.5.0"
     "@parcel/watcher-win32-x64" "2.5.0"
 
-"@reatom/async@^3.16.4":
-  version "3.16.4"
-  resolved "https://registry.yarnpkg.com/@reatom/async/-/async-3.16.4.tgz#c67492c96883a913001e9c43f81408ecec0ecc00"
-  integrity sha512-tGkM0Y2d1R2+EVyfyOvjZoiL7PE6TfJAdaKudoV1VDH6s9WleiW7/op4YoInY9cevHst7rMS8rA/u1tZy/O5zA==
+"@reatom/async@^3.16.5":
+  version "3.16.5"
+  resolved "https://registry.yarnpkg.com/@reatom/async/-/async-3.16.5.tgz#fa54147b61b9cea98e083ac30d742a5295f3c092"
+  integrity sha512-vUEqXFg2PX8JsRJ8i7SB2RhXf/U3p/PwBOU2QVJNhX8DSamhyu+OIiKTxvOky2lvW3rIFOWy0ATpSLn6fh1pkw==
   dependencies:
     "@reatom/core" "^3.5.0"
     "@reatom/effects" "^3.10.0"
@@ -592,12 +592,17 @@
     "@reatom/primitives" "^3.5.0"
     "@reatom/utils" "^3.11.0"
 
-"@reatom/core@^3.1.1", "@reatom/core@^3.2.0", "@reatom/core@^3.4.0", "@reatom/core@^3.5.0", "@reatom/core@^3.8.1", "@reatom/core@^3.9.2":
+"@reatom/core@^3.1.1", "@reatom/core@^3.2.0", "@reatom/core@^3.4.0", "@reatom/core@^3.5.0", "@reatom/core@^3.8.1":
   version "3.9.2"
   resolved "https://registry.yarnpkg.com/@reatom/core/-/core-3.9.2.tgz#1198fe7c0ab6c047e28964bb9e66ca5ebc5aa9b3"
   integrity sha512-jGBPmqIbjVh6honS7X+oRkVfTIHoU7MhhgX/QBDLG2C+sRLYWHTrs8Ai2zHkp5OjWgD0J3+gyosWLql/AEictQ==
 
-"@reatom/effects@^3.10.0", "@reatom/effects@^3.11.0", "@reatom/effects@^3.2.0", "@reatom/effects@^3.7.0", "@reatom/effects@^3.7.3":
+"@reatom/core@^3.9.3":
+  version "3.9.3"
+  resolved "https://registry.yarnpkg.com/@reatom/core/-/core-3.9.3.tgz#bff8222253a366d347d3fa615e100405aa57277b"
+  integrity sha512-Ts0R41475+38HhTXFUWuYgxjE90jmZMMp5yvBONhGMYLyPIDtG/zJUmivSBwXtVOI5VYeiRW6T4VUkX7ZjnDGg==
+
+"@reatom/effects@^3.10.0", "@reatom/effects@^3.2.0", "@reatom/effects@^3.7.0", "@reatom/effects@^3.7.3":
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/@reatom/effects/-/effects-3.11.0.tgz#e3f6031c20cbbc530d25ac2c4fe6aa35b922d301"
   integrity sha512-RN5YxqVukttc3/3Uon1KtI/p4IgkUvOM2Va7to2e/xWirmXYtYqSBdQ/btn2NhGcB6ltwWtjFVB2gjHmxtLWUg==
@@ -605,19 +610,27 @@
     "@reatom/core" "^3.2.0"
     "@reatom/utils" "^3.5.0"
 
-"@reatom/framework@^3.4.32":
-  version "3.4.57"
-  resolved "https://registry.yarnpkg.com/@reatom/framework/-/framework-3.4.57.tgz#477ac11a5426923584cffe0f945867b7bbe5f2a6"
-  integrity sha512-qU+GzyiIVW5oD/h39CHyDlsai14FkvN3JwLv9RXnWoe4AuvmjXbXNNErubp591kZ6HocmExXa5NX9qWg7+ldcg==
+"@reatom/effects@^3.11.1":
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/@reatom/effects/-/effects-3.11.1.tgz#eca664fb14abe4acd0d81ee7a6edbcc875f2625e"
+  integrity sha512-JhEB99+Wklfkg0kpV8sKvf1tP+16DaUXOaRYW1yxrHBleQ4WgOIO7j0hHqybmhMqJ/qS7Rcs3l8X0NBaH2bRJg==
   dependencies:
-    "@reatom/async" "^3.16.4"
-    "@reatom/core" "^3.9.2"
-    "@reatom/effects" "^3.11.0"
+    "@reatom/core" "^3.2.0"
+    "@reatom/utils" "^3.5.0"
+
+"@reatom/framework@^3.4.58":
+  version "3.4.58"
+  resolved "https://registry.yarnpkg.com/@reatom/framework/-/framework-3.4.58.tgz#0fb7d16782b870644abf68956c0f690ee91ccee3"
+  integrity sha512-iHKtf2N+57Uf6qQb/3rxij3pew/5LI7EliIuQTSgfmV15FxJktGDl9Vxj3KhEzW01XwnJBS7VRijuwS/Hz3Wvg==
+  dependencies:
+    "@reatom/async" "^3.16.5"
+    "@reatom/core" "^3.9.3"
+    "@reatom/effects" "^3.11.1"
     "@reatom/hooks" "^3.6.0"
     "@reatom/lens" "^3.11.6"
     "@reatom/logger" "^3.8.4"
     "@reatom/primitives" "^3.7.3"
-    "@reatom/utils" "^3.11.1"
+    "@reatom/utils" "^3.11.2"
 
 "@reatom/hooks@^3.2.0", "@reatom/hooks@^3.3.1", "@reatom/hooks@^3.6.0":
   version "3.6.0"
@@ -647,10 +660,10 @@
     "@reatom/core" "^3.8.1"
     "@reatom/utils" "^3.9.0"
 
-"@reatom/npm-react@^3.8.3":
-  version "3.10.4"
-  resolved "https://registry.yarnpkg.com/@reatom/npm-react/-/npm-react-3.10.4.tgz#de82b441f5b7b0448070d8dfc32a8ba01bfc77c9"
-  integrity sha512-vOaVwtNcxsEYl/3jUBAZ+c1gKT2RmFmyZK+OC7mSJeF2mS/h8044+FADmsIyZgIeiUvzDbVpUmjShVwoVhfxeA==
+"@reatom/npm-react@^3.10.5":
+  version "3.10.5"
+  resolved "https://registry.yarnpkg.com/@reatom/npm-react/-/npm-react-3.10.5.tgz#85f03796dfee28078865c30c2198c066b4583e47"
+  integrity sha512-TV86OP14sTY/JC9xSwTmYEmFu2J5mdKyezXKY2z6XuxXTGR+bNg37rxyZvPBwNigooAqlYfRrnxoPHpL8WP8fw==
   dependencies:
     "@reatom/core" "^3.5.0"
     "@reatom/effects" "^3.7.3"
@@ -666,10 +679,15 @@
     "@reatom/core" "^3.1.1"
     "@reatom/utils" "^3.1.1"
 
-"@reatom/utils@^3.1.0", "@reatom/utils@^3.1.1", "@reatom/utils@^3.11.0", "@reatom/utils@^3.11.1", "@reatom/utils@^3.3.0", "@reatom/utils@^3.5.0", "@reatom/utils@^3.9.0":
+"@reatom/utils@^3.1.0", "@reatom/utils@^3.1.1", "@reatom/utils@^3.11.0", "@reatom/utils@^3.3.0", "@reatom/utils@^3.5.0", "@reatom/utils@^3.9.0":
   version "3.11.1"
   resolved "https://registry.yarnpkg.com/@reatom/utils/-/utils-3.11.1.tgz#89428a62cbe5e7c313bc86e5ef6721c685914b2a"
   integrity sha512-ge9D3ZkkLl7TGMsOrALW5W1uown6yRg8D7zUxj23tSRG7+QFJNAthiEVNMxogirw8l7fLcovbpgSGTQb/atyzA==
+
+"@reatom/utils@^3.11.2":
+  version "3.11.2"
+  resolved "https://registry.yarnpkg.com/@reatom/utils/-/utils-3.11.2.tgz#22a455d98763df250e3d5e0310d5d890acaecaa2"
+  integrity sha512-4xeSI8mQ3OEg0cUFYuQu3EMe4NJm2NKggImIV3Lm1ApIPue5F9rJ0geQ30BEAixDiMb8XUuEL5Hlzy1uuOqkQQ==
 
 "@rollup/pluginutils@^5.1.3":
   version "5.1.4"
@@ -939,20 +957,6 @@
   version "15.7.14"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.14.tgz#1433419d73b2a7ebfc6918dcefd2ec0d5cd698f2"
   integrity sha512-gNMvNH49DJ7OJYv+KAKn0Xp45p8PLl6zo2YnvDIbTd4J6MER2BmWN49TG7n9LvkyihINxeKW8+3bfS2yDC9dzQ==
-
-"@types/react-dom@^5.3.3":
-  version "18.2.0"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.0.tgz#374f28074bb117f56f58c4f3f71753bebb545156"
-  integrity sha512-8yQrvS6sMpSwIovhPOwfyNf2Wz6v/B62LFSVYQ85+Rq3tLsBIG7rP5geMxaijTUxSkrO6RzN/IRuIAADYQsleA==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react@*":
-  version "19.0.4"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.0.4.tgz#ad1270e090118ac3c5f0928a29fe0ddf164881df"
-  integrity sha512-3O4QisJDYr1uTUMZHA2YswiQZRq+Pd8D+GdVFYikTutYsTz+QZgWkAPnP7rx9txoI6EXKcPiluMqWPFV3tT9Wg==
-  dependencies:
-    csstype "^3.0.2"
 
 "@types/react@^18.2.43":
   version "18.3.18"

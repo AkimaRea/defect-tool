@@ -57,7 +57,7 @@ export const Sort = () => {
   return (
     <section className={s.page}>
       <button className={s.fullscreen} onClick={handleFullscreenMode}>
-        <img src={import.meta.env.BASE_URL + "fullscreen.svg"} alt="" />
+        <img src={import.meta.env.BASE_URL + "/fullscreen.svg"} alt="" />
       </button>
 
       <div className={s.viewer}>
@@ -105,9 +105,9 @@ export const Sort = () => {
 					<div className={s.content}></div>
 				</div> */}
 
-        <button className={cx(s.button)} onClick={handleSkip}>
+        {/* <button className={cx(s.button)} onClick={handleSkip}>
           Пропустить снимок
-        </button>
+        </button> */}
       </div>
     </section>
   );

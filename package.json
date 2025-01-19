@@ -13,8 +13,8 @@
 		"deploy": "gh-pages -d build"
 	},
 	"dependencies": {
-		"@reatom/framework": "^3.4.32",
-		"@reatom/npm-react": "^3.8.3",
+		"@reatom/framework": "^3.4.58",
+		"@reatom/npm-react": "^3.10.5",
 		"axios": "^1.6.7",
 		"classnames": "^2.5.1",
 		"gh-pages": "^6.3.0",
@@ -27,7 +27,6 @@
 		"@types/axios": "^0.14.0",
 		"@types/node": "^20.11.6",
 		"@types/react": "^18.2.43",
-		"@types/react-dom": "^5.3.3",
 		"@typescript-eslint/eslint-plugin": "^6.14.0",
 		"@typescript-eslint/parser": "^6.14.0",
 		"@vitejs/plugin-react": "^4.2.1",
