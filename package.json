@@ -17,6 +17,7 @@
 		"classnames": "^2.5.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-toastify": "^11.0.3",
 		"vite-plugin-svgr": "^4.2.0"
 	},
 	"devDependencies": {
@@ -34,8 +35,5 @@
 		"typescript": "^5.2.2",
 		"vite": "^5.0.8",
 		"vite-plugin-mkcert": "^1.17.3"
-	},
-	"engines": {
-		"node": "18.x"
 	}
 }

@@ -1,124 +1,139 @@
 .page {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
-	height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
 
-	@media screen and (max-width: 860px) {
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr;
-	}
+  @media screen and (max-width: 860px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 .viewer {
-	height: 100%;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	overflow: hidden;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
 
-	&_bg {
-		position: absolute;
-		width: 100%;
-		display: flex;
-		flex: 1;
-		height: 100%;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		filter: blur(10px);
-	}
+  &_bg {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+  }
 
-	.viewer_image {
-		position: relative;
-		z-index: 100;
-		width: fit-content;
+  .viewer_image {
+    position: relative;
+    z-index: 100;
+    width: fit-content;
 
-		img {
-			width: 100%;
-			max-height: 600px;
-			object-fit: contain;
-			-webkit-box-shadow: 0px 0px 40px 15px rgba(34, 60, 80, 0.3);
-			-moz-box-shadow: 0px 0px 40px 15px rgba(34, 60, 80, 0.3);
-			box-shadow: 0px 0px 40px 15px rgba(34, 60, 80, 0.3);
-		}
-	}
+    img {
+      width: 100%;
+      max-height: 600px;
+      object-fit: contain;
+      -webkit-box-shadow: 0px 0px 40px 15px rgba(34, 60, 80, 0.3);
+      -moz-box-shadow: 0px 0px 40px 15px rgba(34, 60, 80, 0.3);
+      box-shadow: 0px 0px 40px 15px rgba(34, 60, 80, 0.3);
+    }
+  }
 }
 
 .actions {
-	padding:20px;
+  padding: 20px;
 
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .type_input {
-	width: fit-content;
-	white-space: nowrap;
+  width: fit-content;
+  white-space: nowrap;
 
-	display: flex;
-	align-items: center;
-	gap: 5px;
-	&:hover {
-		cursor: pointer;
-	}
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .defects {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 
-	&::after {
-		content: "";
-		flex: auto;
-	}
+  &::after {
+    content: "";
+    flex: auto;
+  }
 }
 
 .button {
-	background: transparent;
-	border: 1px solid #ffd43b;
-	border-radius: 10px;
-	padding: 12px 16px;
-	width: 100%;
-	font-weight: bold;
-	font-size: 16px;
+  background: transparent;
+  border: 1px solid #ffd43b;
+  border-radius: 10px;
+  padding: 12px 16px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
 
-	transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
 
-	&:hover {
-		background: #ffd43b;
-		color: #242424;
-		cursor: pointer;
-	}
+  &:hover {
+    &:not(:disabled) {
+      background: #ffd43b;
+      color: #242424;
+      cursor: pointer;
+    }
+  }
 
-	&:active {
-		opacity: 0.5;
-	}
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 .card {
-	border-radius: 10px;
-	padding: 12px 16px;
-	background: #2e2e2e;
-	border: 1px solid #474747;
+  border-radius: 10px;
+  padding: 12px 16px;
+  background: #2e2e2e;
+  border: 1px solid #474747;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .title {
+    text-align: center;
+    padding-bottom: 12px;
+    margin: 0;
+    border-bottom: 1px solid #474747;
+  }
+
+  .content {
+    background: #242424;
+    border-radius: 10px;
+    padding: 12px 16px;
+  }
+}
+
+.fullscreen {
+	position: absolute;
+	top: 0;
+	z-index: 109000;
 	display: flex;
-	flex-direction: column;
-	gap: 1em;
-
-	.title {
-		text-align: center;
-		padding-bottom: 12px;
-		margin: 0;
-		border-bottom: 1px solid #474747;
-	}
-
-	.content {
-		background: #242424;
-		border-radius: 10px;
-		padding: 12px 16px;
-	}
+	align-items: center;
+	justify-content: center;
 }
