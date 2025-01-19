@@ -6,19 +6,22 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	resolve: {
-		alias: {
-			"@": path.resolve(__dirname, "./src/"),
-		},
-	},
-	server: {
-		open: true,
-		hmr: {
-			host: 'localhost',
-			port: 5137,
-			protocol: 'ws'
-		}
-	},
-	
-	plugins: [svgr(), react()/* , mkcert() */],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src/"),
+    },
+  },
+  build: {
+    outDir: "./build",
+    emptyOutDir: true, // also necessary
+  },
+  server: {
+    open: true,
+    hmr: {
+      host: "localhost",
+      port: 5137,
+      protocol: "ws",
+    },
+  },
+  plugins: [svgr(), react() /* , mkcert() */],
 });
