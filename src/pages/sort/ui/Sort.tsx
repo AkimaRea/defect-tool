@@ -105,9 +105,9 @@ export const Sort = () => {
 					<div className={s.content}></div>
 				</div> */}
 
-        {/* <button className={cx(s.button)} onClick={handleSkip}>
+        <button className={cx(s.button)} onClick={handleSkip}>
           Пропустить снимок
-        </button> */}
+        </button>
       </div>
     </section>
   );

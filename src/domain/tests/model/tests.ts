@@ -25,7 +25,6 @@ export const getTestAsync = reatomAsync(
   {
     name: "getTestAsync",
     onFulfill: (ctx, res) => {
-      console.log(res);
       testAtom(ctx, res.data);
     },
     onReject: RejectedCallback,
@@ -44,7 +43,6 @@ export const processTestAsync = reatomAsync(
     name: "processTestAsync",
     onFulfill: (ctx) => {
       getTestAsync(ctx);
-      toast.success('Дефекты установлены!')
     },
     onReject: RejectedCallback,
   }
