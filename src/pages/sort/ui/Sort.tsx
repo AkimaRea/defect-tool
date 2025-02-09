@@ -11,6 +11,23 @@ import {
 } from "@/domain/tests";
 import { toast } from "react-toastify";
 
+// Функция для получения или создания UID пользователя
+function getOrCreateUid(): string {
+  let uid = localStorage.getItem("userUid");
+  if (!uid) {
+    uid = generateUid();
+    localStorage.setItem("userUid", uid);
+  }
+  return uid;
+}
+
+// Функция для генерации нового UID
+function generateUid(): string {
+  return 'xxxx-xxxx-xxxx-xxxx'.replace(/[x]/g, () => {
+    return (Math.random() * 16 | 0).toString(16);
+  });
+}
+
 export const Sort = () => {
   /*  const url = `https://loremflickr.com/500/500?random=${(38)
     .toFixed(0)}`; */
@@ -30,8 +47,9 @@ export const Sort = () => {
   };
 
   const handleSubmit = () => {
+    const userUid = getOrCreateUid(); // Получаем или создаем UID пользователя
     if (chosen.size) {
-      processTest({ uid: test.uid, target: Array.from(chosen).join(",") });
+      processTest({ uid: test.uid, target: Array.from(chosen).join(","), userUid });
       setChosen(new Set());
     } else {
       toast.error("Выберите дефекты!");
@@ -53,6 +71,7 @@ export const Sort = () => {
       document.documentElement.requestFullscreen();
     }
   };
+
 
   return (
     <section className={s.page}>

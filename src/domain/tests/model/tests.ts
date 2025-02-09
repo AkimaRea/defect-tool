@@ -37,6 +37,7 @@ export const processTestAsync = reatomAsync(
     const formData = new FormData();
     formData.append("uid", payload.uid);
     formData.append("target", payload.target);
+    formData.append("userUid", payload.userUid); // Добавляем UID пользователя
     return ctx.schedule(() => instance.post("/process-test", formData));
   },
   {

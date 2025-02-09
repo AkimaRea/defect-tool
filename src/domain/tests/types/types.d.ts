@@ -4,6 +4,7 @@ type TestSchema = {
 };
 
 type ProcessTestSchema = {
-  uid: string
-  target: string
+  uid: string; // UID теста
+  target: string;
+  userUid: string; // UID пользователя
 }
